@@ -35,7 +35,6 @@ package trie;
 
 import java.util.*;
 
-import javax.swing.tree.TreeNode;
 public class AutoCompleteSystem{
     private class TrieNode{
         Map<Character, TrieNode> children;
