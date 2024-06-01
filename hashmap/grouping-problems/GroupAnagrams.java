@@ -9,7 +9,7 @@ public class GroupAnagrams {
 
         for (String str : strs) {
             char[] charArray = str.toCharArray();
-            java.util.Arrays.sort(charArray);
+            java.util.Arrays.sort(charArray); // sorts the array elements in ascending order using the natural ordering of the characters
             String sortedStr = new String(charArray);
 
             if (!anagramMap.containsKey(sortedStr)) {

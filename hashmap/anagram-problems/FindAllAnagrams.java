@@ -24,11 +24,12 @@ public class FindAllAnagrams {
                 char leftChar = s.charAt(left);
                 sCount.put(leftChar, sCount.get(leftChar) - 1);
                 if (sCount.get(leftChar) == 0) {
-                    sCount.remove(leftChar);
+                    sCount.remove(leftChar); // removes the key and its corresponding value from the map
                 }
                 left++;
             }
 
+            // equals() to compare HashMap instances, it checks if both maps contain the same mappings (i.e., the same keys and values).
             if (sCount.equals(pCount)) {
                 result.add(left);
             }
