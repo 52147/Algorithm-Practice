@@ -7,12 +7,17 @@ class TreeNode {
 
 public class PathSum {
     public boolean hasPathSum(TreeNode root, int sum) {
+        // base case to handel case where node have only child
         if (root == null) {
             return false;
         }
+
+        // check if the root value equal to the sum when we reach the end of the path
         if (root.left == null && root.right == null) {
             return root.val == sum;
         }
+
+        // decrease the sum with root value during traversal
         return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
     }
 
@@ -31,3 +36,10 @@ public class PathSum {
     }
 }
 
+// sum = 3
+//   1
+//  / \
+// 2   3
+// node 1: 3 - 1 = 2 
+// node 2: node 2 is leaf node -> 2 = 2 -> return true 
+// node 3: node 2 is leaf node -> 2 != 3 -> return false

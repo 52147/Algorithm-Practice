@@ -7,6 +7,7 @@ class TreeNode {
 
 public class LowestCommonAncestor {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        // if we reach the end of the path root== null return null node as base case
         if (root == null || root == p || root == q) {
             return root;
         }
