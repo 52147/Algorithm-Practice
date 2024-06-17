@@ -60,6 +60,10 @@ public class SerializeDeserializeBinaryTree {
 
         return root;
     }
+    // line 54:
+    // if (i < nodes.length && !nodes[i].equals("null")) 
+    //     i < nodes.length: Ensures that the index i is within the bounds of the nodes array, preventing an ArrayIndexOutOfBoundsException.
+    //     !nodes[i].equals("null"): Checks if the current element in the nodes array is not "null". If it's not "null", it means we need to create a new TreeNode for this value.
 
     public static void main(String[] args) {
         SerializeDeserializeBinaryTree solution = new SerializeDeserializeBinaryTree();

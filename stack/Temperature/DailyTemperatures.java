@@ -1,3 +1,4 @@
+package stack.Temperature;
 import java.util.Stack;
 
 public class DailyTemperatures {
