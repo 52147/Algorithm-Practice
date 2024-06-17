@@ -1,5 +1,10 @@
 package graph.traversal.dfs;
-
+// grid(matrix) can direct access adj cell so we do not need to create an adj list
+// For a cell located at (i, j), its adjacent cells can be accessed directly using simple arithmetic on the indices:
+// Up: (i - 1, j)
+// Down: (i + 1, j)
+// Left: (i, j - 1)
+// Right: (i, j + 1)
 public class NumberOfIslands {
     
     // Function to count the number of islands in a grid
