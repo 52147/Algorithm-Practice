@@ -14,6 +14,8 @@ public class ContinuousSubarraySum {
             int mod = k == 0 ? cumulativeSum : cumulativeSum % k;
             
             if (modMap.containsKey(mod)) {
+                // The condition if (i - modMap.get(mod) > 1) ensures that the identified subarray 
+                // has at least two elements, which is required by the problem statement.
                 if (i - modMap.get(mod) > 1) {
                     return true;
                 }
